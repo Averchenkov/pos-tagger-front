@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FirstPage from "./pages/FirstPage";
+import {Navbar} from "./components/Navbar";
+import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import AndAnotherOnePage from "./pages/AndAnotherOnePage";
+import {Context} from "./context/Context";
+import {useTags} from "./hooks/tags.hooks";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App: React.FC = () => {
+    const {list, set, getTag} = useTags()
+
+    return (
+        <Context.Provider value={{list, set, getTag}}>
+            <BrowserRouter>
+                <div className="App">
+                    {/*<header>
+                        <Navbar/>
+                    </header>*/}
+                    <main>
+                        <div className="container">
+                            <Routes>
+                                <Route element={<FirstPage/>} path="ner"/>
+                                <Route element={<AndAnotherOnePage/>} path="two"/>
+                                <Route element={<AndAnotherOnePage/>} path="three"/>
+                                <Route element={<AndAnotherOnePage/>} path="four"/>
+                                <Route element={<Navigate to="ner" />} path="*" />
+                            </Routes>
+                        </div>
+                    </main>
+                </div>
+            </BrowserRouter>
+        </Context.Provider>
+    );
 }
 
 export default App;
