@@ -6,6 +6,8 @@ import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
 import AndAnotherOnePage from "./pages/AndAnotherOnePage";
 import {Context} from "./context/Context";
 import {useTags} from "./hooks/tags.hooks";
+import github from "./images/github.png"
+import vk from "./images/vk.png"
 
 
 const App: React.FC = () => {
@@ -29,6 +31,28 @@ const App: React.FC = () => {
                             </Routes>
                         </div>
                     </main>
+                    <footer className="footer">
+                    <ul className="footerList">
+                        <li>
+                            <span>
+                            <img src={vk} alt="vk"/>
+                            </span>
+                            <a href="https://vk.com/nikitaaver" target="_blank">Vk</a>
+                        </li>
+                        <li>
+                            <span>
+                            <img src={github} alt="github" />
+                            </span>
+                            <a href="https://github.com/Vulon/NER_roberta" target="_blank">Backend</a>
+                        </li>
+                        <li>
+                            <span>
+                            <img src={github} alt="github"/>
+                            </span>
+                            <a href="https://github.com/Averchenkov/pos-tagger-front" target="_blank">Frontend</a>
+                        </li>
+                    </ul>
+                    </footer>
                 </div>
             </BrowserRouter>
         </Context.Provider>

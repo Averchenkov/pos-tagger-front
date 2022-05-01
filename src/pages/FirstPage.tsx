@@ -74,7 +74,8 @@ const FirstPage: React.FC = () => {
                 NER can be used as a knowledge extractor when you are interested
                 in a piece of certain information in your text.</p>
             <div className="classes">
-                Hover on an entity to see its class description <br/> Classes:
+                Hover on an entity to see its class description<br/>
+                <span>Classes: </span>
                 {tags.list && tags.list.map((description, num) => {
                     if (description.color)
                     return (

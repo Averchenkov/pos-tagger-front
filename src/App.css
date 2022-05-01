@@ -159,13 +159,10 @@ nav li:first-of-type {
 
 .answers {
   color: #333;
-  /* overflow-y: scroll; */
-  /* max-height: 450px; */
   margin-top: 15px;
   border-radius: 0.25rem;
   font-size: 18px!important;
-  margin-bottom: 100px;
-/* background: linear-gradient(#fff,#fff,#efefef)*/
+  margin-bottom: 80px;
 }
 
 .answers p {
@@ -282,3 +279,41 @@ nav li:first-of-type {
   }
 }
 
+.footer {
+  margin-top: 80px;
+  padding-top: 40px;
+  border-top: 1px solid #d3d3d3;
+
+}
+.footerList {
+  padding-left: 500px;
+  display: flex;
+  flex-direction: row-reverse;
+  list-style: none;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.footerList li {
+  display: block;
+  display: flex;
+}
+.footerList span {
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  height: 1.5rem;
+}
+.footerList a {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  text-decoration: none;
+  color: #575757;
+}
+.footerList a:hover {
+  border-bottom: 1px solid #575757;
+}
+.footerList img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
