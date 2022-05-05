@@ -1,7 +1,6 @@
 .App {
   max-width: 1040px;
   width: 100%;
-  min-width: 750px;
   position: relative;
 }
 
@@ -283,10 +282,10 @@ nav li:first-of-type {
   margin-top: 80px;
   padding-top: 40px;
   border-top: 1px solid #d3d3d3;
-
 }
+
 .footerList {
-  padding-left: 500px;
+  padding-left: 50%;
   display: flex;
   flex-direction: row-reverse;
   list-style: none;
@@ -294,7 +293,6 @@ nav li:first-of-type {
   padding-right: 20px;
 }
 .footerList li {
-  display: block;
   display: flex;
 }
 .footerList span {
@@ -316,4 +314,61 @@ nav li:first-of-type {
 .footerList img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .footerList {
+    padding-left: 40%;
+  }
+  .inputs textarea {
+    height: 125px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-top: 25px;
+  }
+  .inputArea {
+    flex-flow: column-reverse;
+  }
+  .examples {
+    max-width: 100%;
+  }
+  .inputs {
+    margin-top: 20px;
+    margin-right: 0;
+  }
+  .answers {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .answer:last-child {
+    margin: 0;
+  }
+  .footer {
+    margin-top: 40px;
+    padding-top: 60px;
+  }
+  .footerList {
+    padding-left: 30%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .footerList {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .footerList {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .inputs textarea {
+    height: 150px;
+  }
 }
